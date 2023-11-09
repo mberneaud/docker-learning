@@ -20,8 +20,7 @@ ENV PATH="${PATH}:/home/runner/.local/bin"
 
 COPY ./  ./
 
-RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir poetry==1.7.0 \
+RUN pip install --no-cache-dir poetry==1.7.0 \
     && poetry install --only main
 
 EXPOSE 8000
